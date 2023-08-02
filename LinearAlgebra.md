@@ -1,31 +1,38 @@
 ## Vectors, Matrices and Tensors
 - Vectors are denoted by lowercase letters as shown below
+
+```math
 $$ x = 
 \begin{bmatrix}  
 x_1 \\
 x_2 \\
 ... \\ 
 x_n
-\end{bmatrix}
-$$
+\end{bmatrix} $$
+```
+
 - Matrices are denoted by uppercase letters as shown below:
+```math
 $$ A =
 \begin{bmatrix}
 A_{1,1} & A_{1,2} \\
 A_{2,1} & A_{2,2}
 \end{bmatrix}
 $$
+```
+
 - Tensors are given by a single capital letter
+```math
 $$
 A_{i,j,k}
 $$
+```
 ## Matrices
 **- Matrix Multiplication**
 	- To multiply matrices $A$ and $B$, $A$ must have the same amount of columns as the $B$ has rows. In other words, $A$ (has the shape $m \times n$) and $B$ (has the shape $n \times p$) and the product will have the shape $m \times p$
 	- The element-wise product is given by $$C_{i,j} = \sum_k A_{i,k} \cdot B_{k,j}$$
 	- The dot product of two matrices with the same dimensionality is equivalent to the matrix product of $x^T y$
-	- While matrix products aren't commutative, it is commutative when it is a dot product
-	$$ x^Ty = (x^Ty)^T = y^Tx$$
+	- While matrix products aren't commutative, it is commutative when it is a dot product $$ x^Ty = (x^Ty)^T = y^Tx $$
  **- Inverse and Identity Matrix**
 	 - Identity matrix is filled with all zeros except for the diagonal which has 1's
 	 - Inverse matrix is defined as: $$AA^{-1} = I_n$$
