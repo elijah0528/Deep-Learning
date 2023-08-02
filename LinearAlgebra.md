@@ -61,7 +61,7 @@ $$x^Ty = ||x||_2||y||_2\cos\theta$$
 	$$A^TA = AA^T = I$$
 	- This implies that $A^T = A^{-1}$
 	- Orthogonal matrices are special because their inverse is very easy to compute
-## Eigendecomposition
+## Eigenvalue Decomposition
 - An eigenvector of a square matrix $A$ is a nonzero vector $v$ such that multiplication only affects the scale of $A$
 	- $\lambda$ is the eigenvalue corresponding to this eigenvector such that
 	- $Av = \lambda v$
