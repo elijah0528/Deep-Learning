@@ -86,4 +86,18 @@ $$A = Q\Lambda Q^T$$
 	- $U$ and $V$ are orthogonal matrices while $D$ is a diagonal matrix
 	- $U$ is known as the left-singular vectors and $V$ is known as the right-singular vectors
 ## Moore-Penrose Pseudoinverse
-- 
+- For non-square matrices, matrix inversion cannot be done
+	- If $A$ is taller than it is wide, then $A^{-1}$ will have no solution
+		- The pseudoinverse yields $x$ for which $Ax - y$ is minimized in terms of Euclidean norm
+	- If $A$ is wider than it is tall, then $A^{-1}$ will have multiple solutions
+		- The pseudoinverse provides the solution to $x = A^+y$ with minimized Euclidean norm across all solutions
+- The pseudoinverse is defined as 
+$$A^{+} = \lim_{\alpha \rightarrow 0}(A^{T}A+ \alpha I)^{-1}A^T$$
+- In practice, pseudoinverse matrices are calculated as
+$$A^+ = VD^+U^T$$
+## Trace Operator
+- The trace operator sums all the values on the diagonal of a matrix
+- The Frobenius norm can also be written using the trace operator
+$$||A||_F = \sqrt{\text{Tr}(AA^T)}$$
+- The trace operator is invariant to the transpose operator, swapping matrices that are being multiplied within the trace operator and cyclic permutation even if the resulting matrix shape is different
+- Scalars also have their own trace equal to the scalar value themselves
