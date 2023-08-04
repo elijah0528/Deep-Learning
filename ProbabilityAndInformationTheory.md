@@ -29,7 +29,7 @@ $$\text{Cov}(f(x),g(y)) = \mathbb{E}[(f(x)-\mathbb{E}[f(x)])(g(y)-\mathbb{E}[g(y
 - The covariance matrix is a matrix of covariances where the diagonal elements give the variance
 $$\text{Cov}(x)_{i,j} = \text{Cov}(x_i,x_j)$$
 ## Probability Distributions
-**- Bernoulli Distribution**
+- Bernoulli Distribution
   - Distribution over a single variables controlled by $\phi \epsilon [0,1]$ and gives the probability of a variable being equal to 1
 	- Bernoulli Distribution has the following properties
 $$P(x = 1) = \phi$$
@@ -37,25 +37,25 @@ $$P(x = 0) = 1- \phi$$
 $$P(x=x) = \phi^x (1-\phi)^{1-x}$$
 $$\mathbb{E}[x] = \phi$$
 $$\text{Var}(x)= \phi(1-\phi)$$
-**- Multinoulli Distribution**
+- Multinoulli Distribution
   - Distribution over a single variable with a finite $k$ states parameterized by $p \epsilon [0,1]^{k-1}$
   - The $k$-th state is given by $1-1^Tp$  where $1^Tp \leq 0$
   - Used to describe categorical variables
-**- Gaussian Distribution**
-	- Gaussian Distribution is governed by two parameters: $\mu ^2$ and $\sigma$ 
-	- Gaussian Distribution has many applications for many reasons
-		- Many distributions are very close to gaussian distribution
-			- Central Limit Theorem shows that the sum of many independent random variables in normally distributed
-		- Gaussian Distribution encodes the most amount of uncertainty over real numbers
-	- Multivariate Normal Distribution is given by the following formula
+- Gaussian Distribution
+  - Gaussian Distribution is governed by two parameters: $\mu ^2$ and $\sigma$
+  - Gaussian Distribution has many applications for many reasons
+  	- Many distributions are very close to gaussian distribution
+  	- Central Limit Theorem shows that the sum of many independent random variables in normally distributed
+  	- Gaussian Distribution encodes the most amount of uncertainty over real numbers
+  - Multivariate Gaussian Distribution is given by the following formula
 $$N(x;\mu, \Sigma) = \sqrt{\frac{1}{(2\pi)^n\text{det}(\Sigma)}}\text{exp}(-\frac{1}{2}(x-\mu)^T\Sigma^{-1}(x-\mu))$$
-- The parameter $\Sigma$ gives the covariance matrix
-- To evaluate the covariance matrix, the precision matrix ($\beta$) is used instead
-- The Isotropic Gaussian Distribution is a simplified version whose covariance matrix is a scalar times the identity matrix
-**- Exponential and Laplace Distributions**
+  - The parameter $\Sigma$ gives the covariance matrix
+  - To evaluate the covariance matrix, the precision matrix ($\beta$) is used instead
+  - The Isotropic Gaussian Distribution is a simplified version whose covariance matrix is a scalar times the identity matrix
+- Exponential and Laplace Distributions
 	- The exponential distribution has a sharp point at $x=0$ and assigns a probability of 0 to all values less than 0ent variables
 	- The Laplace distribution places a sharp point at an arbitrary value
-**- Dirac and Empirical Distributions**
+- Dirac and Empirical Distributions
 	- The Dirac delta function centers all the mass of a PDF at one point
 		- This function is known as a generalized function since its defined in terms of its integrated form
 			- The integral is 1 but every value except a single point is 0
@@ -65,8 +65,8 @@ $$N(x;\mu, \Sigma) = \sqrt{\frac{1}{(2\pi)^n\text{det}(\Sigma)}}\text{exp}(-\fra
 $$\hat{p}(x) = \frac{1}{m} \sum_{i=0}^m \delta (x-x^{(i)})$$
 	- Forms a PDF based on the distribution of samples
 		- Empirical distribution is essentially a "counter" for samples
-		- Empirical distribution is used for continuous variables - when discrete variables is considered, it simplifies to a multinoulli distribution 
-**- Mixtures of Distribution**
+		- Empirical distribution is used for continuous variables - when discrete variables is considered, it simplifies to a multinoulli distribution
+  - Mixtures of Distribution
 	- Mixture distribution combines different component distributions to create a richer distribution
 		- An example is the empirical distribution which combines a Diract Delta Function for every training example
 	- Latent variables are variables that we cannot observe directly
@@ -76,12 +76,12 @@ $$\hat{p}(x) = \frac{1}{m} \sum_{i=0}^m \delta (x-x^{(i)})$$
 		- The posterior probability ($P(c|x)$) is computed after the model observes $x$ 
 		- The Gaussian mixture model is a universal approximater of probability densities because any smooth density can be approximated
 ## Useful Properties of Common Functions
-**- Logistic Sigmoid**
+- Logistic Sigmoid
 	$$\sigma(x) = \frac{1}{1+\text{exp}(-x)}$$
 	- The logistic sigmoid is used to provide $\phi$ for the Bernoulli distribution since it is bounded between $(0,1)$
 	- Saturates at very large or small values when it becomes flat and insensitive to changes
 	- $\sigma^{-1}$ is referred to as the logit in statistics
-**- Softplus Function**
+- Softplus Function
 	$$\zeta(x) = log(1 + exp(x))$$
 	- Useful for providing the $\beta$ or $\sigma$ parameter for Gaussian distribution since the range is $(0,\infty)$
 	- Softplus function is the softened version $x^+ = \text{max}(0,x)$
