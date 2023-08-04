@@ -39,8 +39,8 @@ $$\mathbb{E}[x] = \phi$$
 $$\text{Var}(x)= \phi(1-\phi)$$
 **- Multinoulli Distribution**
   - Distribution over a single variable with a finite $k$ states parameterized by $p \epsilon [0,1]^{k-1}$
-	- The $k$-th state is given by $1-1^Tp$  where $1^Tp \leq 0$ 
-	- Used to describe categorical variables
+  - The $k$-th state is given by $1-1^Tp$  where $1^Tp \leq 0$
+  - Used to describe categorical variables
 **- Gaussian Distribution**
 	- Gaussian Distribution is governed by two parameters: $\mu ^2$ and $\sigma$ 
 	- Gaussian Distribution has many applications for many reasons
