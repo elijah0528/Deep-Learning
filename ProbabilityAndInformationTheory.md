@@ -99,5 +99,5 @@ $$\zeta(x) - \zeta(-x) = x$$
 - Bayes' Theorem calculates $P(x|y)$ given $P(y|x)$ through the formula
 $$P(x|y) = \frac{P(x)P(y|x)}{P(y)}$$
 - Even though $P(y)$ is in the formula, it can be calculated with the formula $P(y) = \Sigma _x P(y|x)P(x)$
-## Technical Details of Continuous Variables
+## Technical Details of Continuous Variables 
 
