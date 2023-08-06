@@ -99,5 +99,33 @@ $$\zeta(x) - \zeta(-x) = x$$
 - Bayes' Theorem calculates $P(x|y)$ given $P(y|x)$ through the formula
 $$P(x|y) = \frac{P(x)P(y|x)}{P(y)}$$
 - Even though $P(y)$ is in the formula, it can be calculated with the formula $P(y) = \Sigma _x P(y|x)P(x)$
-## Technical Details of Continuous Variables 
-
+## Information Theory
+- The intuition behind Information theory is that an unlikely event occurrence should be more informative than a likely event occurrence
+	- Likely events have low information content
+	- Unlikely events have high information content
+	- Independent events have additive information content
+- Self-information(of the unit "nats" when the base of the log is $e$) of an event is defined by the formula
+$$I(x) =-logP(x)$$
+	- One nat is the amount of information gained by observing an event of probability $\frac{1}{e}$
+	- Other measures of information use base-2 and use units called bits or shannons
+- The amount of uncertainty in a probability distribution can be quantified with Shannon's Entropy
+	- The expected amount of information in an event from the distribution
+	- Gives a lower bound on the number of bits needed to encode symbols from $P$
+	- Certain events have low entropy while uncertain events have high entropy
+	- When $x$ is continuous, Shannon's Entropy is called differential entropy
+	- Shannon's Entropy is given by the following formula
+$$H(x) = \mathbb{E} _{X\sim P}[I(x)]= -\mathbb{E} _{X\sim P}[logP(x)]$$
+- Kullback-Liebler (KL) divergence measures how different two distributions are from one another
+	- In the case of discrete variables, it is the amount of extra information(measured in nats) to send a message from $P(x)$ when given a minimized length message from $Q(x)$
+	- KL divergence is 0 for discrete variables if the distributions are the same, for continuous variables if the distributions are equal almost everywhere
+	- The difference is asymmetric $D_{KL}(P||Q) \neq D_{KL}(Q||P)$
+	- It is given by the formula
+$$D_{KL}(P||Q) = \mathbb{E} _{X\sim P}[log\frac{P(x)}{Q(x)}] = \mathbb{E} _{X\sim P}[log P(x)- log Q(x)]$$
+- Cross entropy is given by the formula: $H(P,Q) = H(P) + D_{KL}(P||Q)$
+- Minimizing the cross entropy with respect to $Q$ is the same as minimizing the KL divergence
+## Structured Probabilistic Model
+- When dealing with multiple variables, it is computationally inefficient to fit it on a single probability distribution
+- The probability distribution over multiple variables can be expressed as $p(a,b,c) = p(a)p(b|a)p(c|b)$ 
+- A Structured Probability Model or Graphical model is the factorization of a distribution into individual variables
+- The two types of SPMs are directed and undirected models
+	- Directed graphs have directed edges
