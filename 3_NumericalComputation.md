@@ -4,8 +4,8 @@
 	- Overflow occurs when very large numbers are approximated as $\infty$ or $-\infty$
 - The softmax function is vulnerable to overflow/underflow issues
 	- The softmax function is defined as
-$$\text{softmax}(x)_i= \frac{e^{x_i}}{\sum_{j=1}^n e^{x_j}}$$
-- To resolve this, the softmax is evaluated as $\text{softmax}(z) = x - \text{max}_ix_i$
+$$\text{softmax}(x)_i= \frac{e^{x_i}}{\sum _{j=1} ^{n} e ^{x_j}}$$
+- To resolve this, the softmax is evaluated as $\text{softmax}(z) = x - \text{max}_i x_i$
 	- The largest term in the numerator will have an exponent of 0 and at least one term in the denominator will be 1 which prevents numerator overflow and denominator underflow
 	- This method is still vulnerable to underflow in the numerator
 - Underflow in the numerator can cause $log(softmax(x)) = -\infty$ however, this can be solved in the same way as the original softmax
