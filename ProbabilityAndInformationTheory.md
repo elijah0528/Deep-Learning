@@ -128,4 +128,4 @@ $$D_{KL}(P||Q) = \mathbb{E} _{X\sim P}[log\frac{P(x)}{Q(x)}] = \mathbb{E} _{X\si
 - The probability distribution over multiple variables can be expressed as $p(a,b,c) = p(a)p(b|a)p(c|b)$ 
 - A Structured Probability Model or Graphical model is the factorization of a distribution into individual variables
 - The two types of SPMs are directed and undirected models
-	- Directed graphs have directed edges
+- The probability of a configuration of random variables is proportional to the product of its factors
